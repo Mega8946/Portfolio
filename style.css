@@ -1,7 +1,7 @@
 :root{
-    --text-color: #1a1c20;
+    --text-color: #eeeff1;
     --link-color: #4a76ee;
-    --background-color: #eeeff1;
+    --background-color: #000000;
 }
 
 *{
@@ -17,9 +17,7 @@ html{
 body{
 
     font-family: "Poppins", sans-serif;
-    color: #eeeff1;
-    background-color: var(--background-color);
-
+    color: var(--text-color);
     background-image: url('Images/background\ img.webp');
     background-size: cover;
     background-position: center;
@@ -30,7 +28,6 @@ body{
 }
 
 a{
-    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -51,23 +48,18 @@ nav .left a{
     color: var(--text-color);
     font-size: 22px;
     font-weight: 600;
+    outline: none;
 }
 
 nav .right a{
     color: var(--text-color);
-    margin: 0 10px;
+    margin: 0 30px;
 }
 
-nav .right a:last-child{
-    color: var(--background-color);
-    background-color: var(--text-color);
-    padding: 5px 15px;
-    border-radius: 5px;
+nav .right a:hover{
+    color: var(--link-color);
 }
 
-nav .right a span{
-    margin-left: 5px;
-}
 
 /*  SECTION 1: Hero */
 .hero-section{
@@ -94,25 +86,18 @@ nav .right a span{
 }
 
 .hero-section .text .links a{
-    display: inline-block;
+    color: #fff;
     padding: 5px 10px;
-    border: 2px solid var(--link-color);
+    border: 2px solid transparent;
     border-radius: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    background-color: #4CAF50;
     transition: .1s;
 }
 
 .hero-section .text .links a:hover{
-    color: var(--text-color);
     border: 2px solid var(--text-color);
 }
 
-.hero-section .text .links a:last-child {
-    background-color: #4CAF50;
-    color: #fff;
-    border-color: transparent;
-}
 
 .hero-section .headshot{
     flex: 2;
@@ -126,7 +111,49 @@ nav .right a span{
     border-radius: 50%;
 }
 
-/* SECTION 2: Skills */
+/* SECTION 2: About */
+.about-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.about-section h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.about-section .group{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-section .group .person-details{
+    text-align: center;
+    flex: 2;
+}
+
+.about-section .group .person-details img{
+    width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.about-section .group .person-details p{
+    font-weight: 600;
+}
+
+.about-section .group .person-details p:last-child{
+    font-weight: normal;
+}
+
+.about-section .group .text{
+    flex: 8;
+    text-align: justify;
+}
+
+/* SECTION 3: Skills */
 .skills-section{
     padding: 0 50px;
     margin-bottom: 100px;
@@ -172,48 +199,6 @@ nav .right a span{
     font-size: 18px;
 }
 
-/* SECTION 3: Testimony */
-.testimony-section{
-    padding: 0 50px;
-    margin-bottom: 100px;
-}
-
-.testimony-section h2{
-    font-size: 35px;
-    margin-bottom: 30px;
-}
-
-.testimony-section .group{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.testimony-section .group .person-details{
-    text-align: center;
-    flex: 2;
-}
-
-.testimony-section .group .person-details img{
-    width: 200px;
-    aspect-ratio: 1/1;
-    /* object-fit: cover; */
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.testimony-section .group .person-details p{
-    font-weight: 600;
-}
-
-.testimony-section .group .person-details p:last-child{
-    font-weight: normal;
-}
-
-.testimony-section .group .text{
-    flex: 8;
-    text-align: justify;
-}
 
 /* SECTION 4: Contact */
 .contact-section{
@@ -223,35 +208,36 @@ nav .right a span{
 
 .contact-section h2{
     font-size: 35px;
-}
-
-.contact-section .group .text{
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .contact-section .group .text{
     text-align: justify;
 }
 
-.contact-section .group .text .contact{
-    margin-top: 20px;
+.contact-section .group .text{
+    margin-bottom: 20px;
 }
 
-.contact-section .group .text .contact a{
-    /* color: var(--text-color); without background image*/
+.contact-section .group .contact a{
+    color: var(--text-color);
     margin: 0 10px;
-    color: var(--background-color);
 }
 
-.contact-section .group .text .contact a:last-child{
-    color: var(--background-color);
-    background-color: var(--text-color);
+.contact-section .group .contact a:last-child{
+    color: var(--text-color);
+    background-color: var(--background-color);
     padding: 5px 15px;
     border-radius: 5px;
 }
 
-.contact-section .group .text .contact a span{
+.contact-section .group .contact a span{
+    color: var(--background-color);
     margin-left: 5px;
+}
+
+.contact-section .group .contact a span:last-child{
+    color: var(--text-color);
 }
 
 
@@ -272,13 +258,13 @@ nav .right a span{
         flex-direction: column-reverse;
     }
 
-    /* SECTION 3: Testimony */
+    /* SECTION 2: About */
 
-    .testimony-section{
+    .about-section{
         text-align: center;
     }
 
-    .testimony-section .group{
+    .about-section .group{
         flex-direction: column;
     }
 
@@ -290,20 +276,6 @@ nav .right a span{
         padding: 0 20px;
     }
 
-    nav .right a{
-        font-size: 22px;
-    }
-
-    nav .right a:last-child{
-        color: var(--text-color);
-        background-color: transparent;
-        padding: 0;
-
-    }
-
-    nav .right span {
-        display: none;
-    }
 
     /* SECTION 1: Hero */
     .hero-section{
@@ -314,7 +286,12 @@ nav .right a span{
         font-size: 30px;
     }
 
-    /* SECTION 2:Skills */
+    /* SECTION 2: About */
+    .about-section{
+        padding: 0 20px;
+    }
+
+    /* SECTION 3:Skills */
     .skills-section{
         padding: 0 20px;
     }
@@ -322,32 +299,21 @@ nav .right a span{
         font-size: 16px;
     }
 
-    /* SECTION 3: Testimony */
-    .testimony-section{
-        padding: 0 20px;
-    }
-
     /* SECTION 4: Contact */
     .contact-section{
         padding: 0 20px;
     }
 
-    .contact-section .group .text .contact a{
+    .contact-section .group .contact a{
         font-size: 22px;
     }
 
-    .contact-section .group .text .contact a:last-child{
-        color: var(--text-color);
+    .contact-section .group .contact a:last-child{
         background-color: transparent;
         padding: 0;
-
     }
 
-    .contact-section .group .text .contact a:last-child{
-        color: var(--background-color);
-    }
-
-    .contact-section .group .text .contact span {
+    .contact-section .group .contact a span {
         display: none;
     }
 
