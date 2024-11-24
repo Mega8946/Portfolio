@@ -1,6 +1,6 @@
 :root{
     --text-color: #eeeff1;
-    --link-color: #4a76ee;
+    --link-color: #0ef;
     --background-color: #000000;
 }
 
@@ -49,6 +49,11 @@ nav .left a{
     font-size: 22px;
     font-weight: 600;
     outline: none;
+}
+
+nav .left  a:hover
+{
+    color: var(--link-color);
 }
 
 nav .right{
