@@ -51,6 +51,10 @@ nav .left a{
     outline: none;
 }
 
+nav .right{
+    display: flex;
+}
+
 nav .right a{
     color: var(--text-color);
     margin: 0 30px;
