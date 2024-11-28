@@ -20,7 +20,6 @@ body{
     color: var(--text-color);
     background-image: url('Images/background\ img.webp');
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
 
     max-width: 1400px;
